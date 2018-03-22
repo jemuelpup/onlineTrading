@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/plugins/materialize/css/materialize.css">
+	<link rel="stylesheet" href="/common/css/materialFont.css">
+	<link rel="stylesheet" href="/common/css/common.css">
+	<link rel="stylesheet" href="/common/css/login.css">
+	<script src="/plugins/angular/angular.min.js"></script>
+</head>
+
+<body ng-app="app">
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="login" ng-controller="Login">
+					<div class="login-card" ng-class="shake ? 'shake':''">
+						<div class="col s12">
+							<h1><img src="/common/images/logo.png" alt=""></h1>
+						</div>
+						<form ng-submit="validateAcess()">
+							<div class="input-field col s12">
+								<input id="uName" type="text" class="validate" ng-model="loginForm.username">
+								<label for="uName">Username</label>
+							</div>
+							<div class="input-field col s12">
+								<input id="pWord" type="password" class="validate" ng-model="loginForm.password">
+								<label for="pWord">Password:</label>
+							</div>
+							<button class="btn waves-effect waves-light right login-button" type="submit" name="action">Submit
+								<i class="material-icons right">send</i>
+							</button>
+						</form>
+						<p class="login-message" ng-class="validAcess? 'invalid':''">{{loginMessage}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="/app/app.js"></script>
+	<script src="/app/controllers/home/LoginCtrl.js"></script>
+	<script src="/app/controllers/home/LoginCtrl.js"></script>
+	<script src="/plugins/materialize/js/bin/materialize.min.js"></script>
+	<!-- <script src="/js/cash.js"></script> -->
+	<!-- <script src="/js/buttons.js"></script> -->
+	<!-- <script src="/app/services.js"></script>
+	<script src="/app/service.js"></script>
+	<script src="/app/controllers.js"></script> -->
+	<!-- <script src="/plugins/jquery/jquery-3.2.1.min.js"></script> -->
+	<!-- <script src="/plugins/materialize/plugins/materialize/js/bin/materialize.min.js"></script> -->
+</body>
+
+</html>
